@@ -4,7 +4,7 @@ import Head from "next/head";
 const Page = ({props}) => {
   return (
     <div>
-      Services
+      Projects
     </div>
   )
 }

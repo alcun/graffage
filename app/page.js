@@ -1,13 +1,14 @@
 import React from "react";
+import Hero from "../components/Hero/Hero";
+import Info from "../components/Info/Info";
 import "./Home.module.scss";
 
 const page = () => {
   return (
-    <div>
       <div id="home-page-wrapper" className="page-container">
-        <div>Hello</div>
+        <Hero/>
+        <Info />
       </div>
-    </div>
   );
 };
 

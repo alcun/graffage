@@ -16,7 +16,8 @@ a {
 }
 
 .page-container {
-  height: calc(100vh - 50px);
+  min-height: calc(100vh);
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -33,4 +34,9 @@ a {
     color: white;
     background: black;
   }
+}
+
+[data-nextjs-scroll-focus-boundary] {
+  display: contents;
+  width: 100%;
 }

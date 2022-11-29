@@ -3,9 +3,10 @@ import './Footer.scss'
 
 const Footer = ({props}) => {
   return (
+    <div>
     <footer id='footer-wrapper'>
       Footer
-    </footer>
+    </footer></div>
   )
 }
 
