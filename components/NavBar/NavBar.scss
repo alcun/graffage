@@ -1,0 +1,23 @@
+#nav-wrapper {
+  height: 50px;
+  background-color: white;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  #nav-logo-wrapper {
+  }
+  #nav-links-wrapper {
+    #nav-links {
+      display: flex;
+      .nav-link {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        list-style: none;
+      }
+    }
+  }
+  #nav-cta-wrapper {
+  }
+}

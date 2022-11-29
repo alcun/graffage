@@ -15,6 +15,16 @@ a {
   box-sizing: border-box;
 }
 
+.page-container {
+  height: calc(100vh - 50px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  color: aliceblue;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
