@@ -5,6 +5,8 @@ const navLinks = [
     fetchRoutes: [
       "https://raw.githubusercontent.com/freeCodeCamp/ProjectReferenceData/master/GDP-data.json",
     ],
+    title: 'Bar',
+    description: 'It a bar yo',
   },
   {
     name: "Scatterplot",
@@ -12,6 +14,8 @@ const navLinks = [
     fetchRoutes: [
       "https://raw.githubusercontent.com/freeCodeCamp/ProjectReferenceData/master/cyclist-data.json",
     ],
+    title: '',
+    description: '',
   },
   {
     name: "Heat",
@@ -19,6 +23,8 @@ const navLinks = [
     fetchRoutes: [
       "https://raw.githubusercontent.com/freeCodeCamp/ProjectReferenceData/master/global-temperature.json",
     ],
+    title: '',
+    description: '',
   },
   {
     name: "Chloropleth",
@@ -27,6 +33,8 @@ const navLinks = [
       "https://cdn.freecodecamp.org/testable-projects-fcc/data/choropleth_map/for_user_education.json",
       "https://cdn.freecodecamp.org/testable-projects-fcc/data/choropleth_map/counties.json",
     ],
+    title: '',
+    description: '',
   },
   {
     name: "Treemap",
@@ -34,6 +42,8 @@ const navLinks = [
     fetchRoutes: [
       "https://cdn.freecodecamp.org/testable-projects-fcc/data/tree_map/kickstarter-funding-data.json",
     ],
+    title: '',
+    description: '',
   },
 ];
 
