@@ -14,7 +14,7 @@ const NavBar = (props) => {
         id="nav-wrapper"
         className={isScrolled ? "scrolledNav" : "unscrolledNav"}
       >
-        <div id="nav-logo-wrapper">Logo</div>
+        <div id="nav-logo-wrapper">Graphs</div>
         <div id="nav-links-wrapper">
           <ul id="nav-links">
             {props.navLinks && props.navLinks.map((navLink, i) => {
