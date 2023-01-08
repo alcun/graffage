@@ -3,22 +3,22 @@ import "./Hero.scss";
 
 const Hero = (props) => {
   return (
-    <div id='hero-wrapper'>
-      <div>Pick a graph</div>
+    <div id="hero-wrapper">
+      <h1>Choose a graph:</h1>
       <div id="nav-links-wrapper">
-          <ul id="nav-links">
-            {props.navLinks &&
-              props.navLinks.map((navLink, i) => {
-                return (
-                  <li key={i} className="nav-link">
-                    <Link href={navLink.link}>{navLink.name}</Link>
-                  </li>
-                );
-              })}
-          </ul>
-        </div>
+        <ul id="nav-links">
+          {props.navLinks &&
+            props.navLinks.map((navLink, i) => {
+              return (
+                <Link href={navLink.link} className="nav-link" key={i}>
+                  <li>{navLink.name}</li>
+                </Link>
+              );
+            })}
+        </ul>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Hero
+export default Hero;
