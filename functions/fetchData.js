@@ -1,5 +1,5 @@
 export default async function getData(fetchRoute) {
-  const res = await fetch('https://raw.githubusercontent.com/freeCodeCamp/ProjectReferenceData/master/GDP-data.json');
+  const res = await fetch(fetchRoute);
 
   if (!res.ok) {
     throw new Error('Failed to fetch data');

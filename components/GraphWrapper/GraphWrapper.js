@@ -10,64 +10,35 @@ import Treemap from "../GraphTypes/Treemap/Treemap";
 // useeffect to assign correct object from navLinks for title/desc/fetchlinks
 //data fetching and rendering will be done inside graphType component
 
-const GraphWrapper = ({ graphType }) => {
-  const [hasGraph, setHasGraph] = useState(null);
-  const [graphInfo, setGraphInfo] = useState(null);
+const GraphWrapper = ({ graphType, graphInfo, graphData }) => {
+  return (
+    <div>
+      <div>GraphType : {graphType}</div>
+      <div id="title">Title: {graphInfo.title}</div>
+      <div>Description: {graphInfo.description}</div>
 
-  useEffect(() => {
-    //if graphType url param is included in name values to lowercase set hasgraph to true
-    //and set the specific navlinks item
-    //else show a whoops thats not a correct graph type
-    const graphTypeInfo = navLinks.find(
-      (graph) =>
-        graph.name.toLocaleLowerCase() === graphType.toLocaleLowerCase()
-    );
-    if (graphTypeInfo) {
-      setHasGraph(true);
-      setGraphInfo(graphTypeInfo);
-    } else {
-      setHasGraph(false);
-    }
-  }, [navLinks && graphType]);
-
-  console.log(graphInfo);
-
-  if (hasGraph && graphInfo) {
-    return (
       <div>
-    
-
-        <div>GraphType : {graphType}</div>
-        <div id='title'>Title: {graphInfo.title}</div>
-        <div>Description: {graphInfo.description}</div>
-
-        <div>
-          {graphType === "bar" ? (
-            <Bar />
-          ) : graphType === "scatterplot" ? (
-            <Scatterplot />
-          ) : graphType === "heat" ? (
-            <Heat />
-          ) : graphType === "chloropleth" ? (
-            <Chloropleth />
-          ) : graphType === "treemap" ? (
-            <Treemap />
-          ) : null}
-        </div>
-
-        <div>
-          Data links:{" "}
-          {graphInfo.fetchRoutes.map((link, i) => {
-            return <div key={i}>{link}</div>;
-          })}
-        </div>
+        {graphType === "bar" ? (
+          <Bar />
+        ) : graphType === "scatterplot" ? (
+          <Scatterplot />
+        ) : graphType === "heat" ? (
+          <Heat />
+        ) : graphType === "chloropleth" ? (
+          <Chloropleth />
+        ) : graphType === "treemap" ? (
+          <Treemap />
+        ) : null}
       </div>
-    );
-  } else if (hasGraph === false) {
-    return <div>Thats not a graph yo</div>;
-  } else {
-    return <div>Loading</div>;
-  }
+
+      <div>
+        Data links:{" "}
+        {graphInfo.fetchRoutes.map((link, i) => {
+          return <div key={i}>{link}</div>;
+        })}
+      </div>
+    </div>
+  );
 };
 
 export default GraphWrapper;

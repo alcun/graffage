@@ -4,21 +4,31 @@ import Script from "next/script";
 import navLinks from "../../data/navLinks";
 import fetchData from "../../functions/fetchData";
 
-
-
 const Page = async ({ params }) => {
- 
   const graphType = params.graphType;
-  const graphData = navLinks.find((nav) => nav.name.toLowerCase() === graphType)
-  const fetchRoutes = graphData.fetchRoutes
-
-  const data = await fetchData(fetchRoutes);
+  const graphInfo = navLinks.find(
+    (graph) => graph.name.toLocaleLowerCase() === graphType.toLocaleLowerCase()
+  );
+  const fetchRoutes = graphInfo ? graphInfo.fetchRoutes : null;
+  const graphData = fetchRoutes
+    ? await Promise.all(
+        fetchRoutes.map(async (route) => {
+          return fetchData(route);
+        })
+      )
+    : null;
 
   return (
     <>
-      
-      <GraphWrapper graphType={graphType} />
-      {JSON.stringify(data)}
+      {graphData ? (
+        <GraphWrapper
+          graphType={graphType}
+          graphInfo={graphInfo}
+          graphData={graphData}
+        />
+      ) : (
+        <div>Thats not a graph yo</div>
+      )}
     </>
   );
 };
