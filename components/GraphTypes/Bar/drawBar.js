@@ -7,11 +7,16 @@ export function drawBar(svgRef) {
     const w = 250;
     const svg = d3.select(svgRef.current);
   
+    //appendsvg
     svg
       .attr("width", w)
       .attr("height", h)
       .style("margin-top", 50)
       .style("margin-left", 50);
+
+      //create scale
+
+      
   
     svg
       .selectAll("rect")

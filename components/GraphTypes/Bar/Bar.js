@@ -5,7 +5,7 @@ import { drawBar } from './drawBar';
 
 
 
-const Bar = (svgRef, graphData) => {
+const Bar = ({svgRef, graphInfo, graphData}) => {
   const svg = React.useRef(svgRef);
 
   console.log(graphData)

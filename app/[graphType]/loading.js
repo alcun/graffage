@@ -4,7 +4,7 @@ import Image from 'next/image';
 const loading = () => {
   return (
       
-    <Image fill src='/giphy.gif'/>
+    <Image fill src='/giphy.gif' alt='Loading...'/>
   )
 }
 

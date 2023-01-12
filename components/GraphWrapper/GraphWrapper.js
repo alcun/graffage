@@ -19,7 +19,7 @@ const GraphWrapper = ({ graphType, graphInfo, graphData }) => {
 
       <div>
         {graphType === "bar" ? (
-          <Bar />
+          <Bar graphInfo={graphInfo} graphData={graphData} />
         ) : graphType === "scatterplot" ? (
           <Scatterplot />
         ) : graphType === "heat" ? (
