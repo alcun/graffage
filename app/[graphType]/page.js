@@ -1,5 +1,6 @@
 import React from "react";
 import GraphWrapper from "../../components/GraphWrapper/GraphWrapper";
+import Script from "next/script";
 
 const Page = async ({ params }) => {
   const graphType = params.graphType;
@@ -22,8 +23,8 @@ const Page = async ({ params }) => {
   const data = await getData();
   return (
     <>
+      
       <GraphWrapper graphType={graphType} />
-      {JSON.stringify(data)}
     </>
   );
 };

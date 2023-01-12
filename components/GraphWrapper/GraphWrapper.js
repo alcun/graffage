@@ -6,7 +6,6 @@ import Chloropleth from "../GraphTypes/Chloropleth/Chloropleth";
 import Heat from "../GraphTypes/Heat/Heat";
 import Scatterplot from "../GraphTypes/Scatterplot/Scatterplot";
 import Treemap from "../GraphTypes/Treemap/Treemap";
-import Script from "next/script";
 
 // useeffect to assign correct object from navLinks for title/desc/fetchlinks
 //data fetching and rendering will be done inside graphType component
@@ -36,10 +35,7 @@ const GraphWrapper = ({ graphType }) => {
   if (hasGraph && graphInfo) {
     return (
       <div>
-        <Script
-          src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"
-          strategy="afterInteractive"
-        />
+    
 
         <div>GraphType : {graphType}</div>
         <div id='title'>Title: {graphInfo.title}</div>
