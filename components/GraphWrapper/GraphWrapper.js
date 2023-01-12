@@ -42,7 +42,7 @@ const GraphWrapper = ({ graphType }) => {
         />
 
         <div>GraphType : {graphType}</div>
-        <div>Title: {graphInfo.title}</div>
+        <div id='title'>Title: {graphInfo.title}</div>
         <div>Description: {graphInfo.description}</div>
 
         <div>

@@ -8,6 +8,7 @@ const Bar = () => {
 
   return (
     <div>Bar
+      <svg>yo</svg>
     </div>
   )
 }
