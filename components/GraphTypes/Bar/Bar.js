@@ -5,11 +5,13 @@ import { drawBar } from './drawBar';
 
 
 
-const Bar = (svgRef) => {
+const Bar = (svgRef, graphData) => {
   const svg = React.useRef(svgRef);
+
+  console.log(graphData)
  
     React.useEffect(() => {
-      drawBar(svg);
+      drawBar(svg, graphData);
     }, [svg]);
   
     return (
