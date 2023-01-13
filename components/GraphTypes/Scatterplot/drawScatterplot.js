@@ -1,7 +1,7 @@
 import * as d3 from "d3";
 
 
-export function drawChloropleth(svgRef, graphData) {
+export function drawScatterplot(svgRef, graphData) {
     const data = [12, 5, 6, 6, 9, 10];
     const h = 120;
     const w = 250;

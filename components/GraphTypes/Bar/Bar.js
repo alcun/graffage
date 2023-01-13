@@ -8,7 +8,6 @@ import { drawBar } from './drawBar';
 const Bar = ({svgRef, graphInfo, graphData}) => {
   const svg = React.useRef(svgRef);
 
-  console.log(graphData)
  
     React.useEffect(() => {
       drawBar(svg, graphData);

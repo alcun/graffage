@@ -1,9 +1,19 @@
 import React from 'react'
+import { drawHeat } from './drawHeat';
 
-const Heat = () => {
+const Heat = ({svgRef, graphData}) => {
+  const svg = React.useRef(svgRef);
+
+ 
+  React.useEffect(() => {
+    drawHeat(svg, graphData);
+  }, [svg]);
+
   return (
-    <div>Heat</div>
-  )
+    <div className='svg-wrapper' id="chart">
+      <svg ref={svg} />
+    </div>
+  );
 }
 
 export default Heat

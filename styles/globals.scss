@@ -24,6 +24,13 @@ a {
   align-items: center;
   background-color: black;
   color: aliceblue;
+
+  .svg-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid grey
+  }
 }
 
 @media (prefers-color-scheme: dark) {

@@ -1,9 +1,19 @@
 import React from 'react'
+import { drawChloropleth } from './drawChloropleth';
 
-const Chloropleth = () => {
+const Chloropleth = ({svgRef, graphData}) => {
+  const svg = React.useRef(svgRef);
+
+ 
+  React.useEffect(() => {
+    drawChloropleth(svg, graphData);
+  }, [svg]);
+
   return (
-    <div>Chloropleth</div>
-  )
+    <div className='svg-wrapper' id="chart">
+      <svg ref={svg} />
+    </div>
+  );
 }
 
 export default Chloropleth
