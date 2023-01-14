@@ -1,23 +1,19 @@
-import React from 'react'
+import React from "react";
 import * as d3 from "d3";
-import { drawBar } from './drawBar';
+import { drawBar } from "./drawBar";
 
-
-
-
-const Bar = ({svgRef, graphInfo, graphData}) => {
+const Bar = ({ svgRef, graphInfo, graphData }) => {
   const svg = React.useRef(svgRef);
 
- 
-    React.useEffect(() => {
-      drawBar(svg, graphData);
-    }, [svg]);
-  
-    return (
-      <div id="chart">
-        <svg ref={svg} />
-      </div>
-    );
-}
+  React.useEffect(() => {
+    drawBar(svg, graphData);
+  }, [svg]);
 
-export default Bar
+  return (
+    <div className="svg-wrapper">
+      <svg id="chart" ref={svg} />
+    </div>
+  );
+};
+
+export default Bar;

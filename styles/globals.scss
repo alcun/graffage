@@ -1,5 +1,6 @@
 html,
 body {
+  overflow: scroll;
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
@@ -16,8 +17,11 @@ a {
 }
 
 .page-container {
+  overflow: inherit;
+
   min-height: calc(100vh);
-  width: 100%;
+  //put next line in media query
+  // min-width: 800px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -29,7 +33,14 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid grey
+    border: 1px solid grey;
+
+    height: 500px;
+
+    #chart{
+width: 100%;
+height: 100%;
+    }
   }
 }
 
@@ -45,10 +56,4 @@ a {
 
 [data-nextjs-scroll-focus-boundary] {
   display: contents;
-  width: 100%;
 }
-
-  #fcc_test_suite_wrapper{
-  //  top: 0;
-  height: 60px !important;
-  }
